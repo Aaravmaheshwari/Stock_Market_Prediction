@@ -7,23 +7,17 @@ Train a machine learning model of your choice on a company stock's historical da
 
 ## Overview
 
-This is the code for [this](https://youtu.be/JuLCL3wCEAk) video on Youtube by Siraj Raval. This takes the past 10 years of historical price data from the Dow Jones and the news headlines from New York times articles (sentiment analysis) to predict future prices. 
+I wanted to use DeepMind's [WaveNet](https://deepmind.com/blog/wavenet-generative-model-raw-audio/), as it's meant for time series analysis and brings us awesome results for audio/TTS/music generation. I wanted to bring this technique outside of audio analysis, in this case to the stock market.
 
-## Dependencies
+We need to have a local conditioning available to be able to cope with changing constraints, which is to my knowledge only available inside this repository:
+https://github.com/dannybtran/tensorflow-wavenet
 
-* numpy
-* pandas
-* nltk
-* scikit-learn
+As it expects audio input, I will just write the stock price data into a wav file and put it into the wavenet.
 
-Install missing dependencies using [pip](https://pip.pypa.io/en/stable/)
-
-## Usage
-
-Run the jupyter notebook by typing `jupyter notebook` in terminal
-
-Install jupyter [here](http://jupyter.readthedocs.io/en/latest/install.html)
+## Results
 
 ## Credits
 
-Credits for this code go to [dineshdaultani](https://github.com/dineshdaultani). I've merely created a wrapper to get people started. 
+Thanks dannybtran for the implementation of local conditioning
+Thanks ibab for implementing wavenet in tensorflow
+Thanks DeepMind for WaveNet
