@@ -14,7 +14,13 @@ https://github.com/dannybtran/tensorflow-wavenet
 
 As it expects audio input, I will just write the stock price data into a wav file and put it into the wavenet.
 
+It didnt work very well using the actual value, as it's almost the same all the time (even if scaled), so I tried using the daily change in percent as input.
+
 ## Results
+![res](https://github.com/hutauf/Stock_Market_Prediction/blob/master/result.png)
+
+As we can see, MSFT should have crashed according to wavenet :)
+It seems like it really likes the -3% daily chance.
 
 ## Credits
 
